@@ -1,7 +1,7 @@
 from flask_mail import Message
 from flask import current_app,render_template
 
-def confirmacion_compra(mail,user,book):
+def confirmacion_compra(app,mail,user,book):
     try:
         message = Message('Confirmacion de compra de Libro',
         sender=current_app.config['MAIL_USERNAME'],
